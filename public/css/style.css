@@ -22,28 +22,51 @@ html {
     scroll-behavior: smooth;
 }
 
-.d {
-    display: none;
-}
-
 body {
     overflow-x: hidden;
     font-family: var(--font-texto);
 }
 
-.container {
+.container-stt {
     width: 100vw;
     height: 100vh;
 }
 
+.area-titulo {
+    width: 100%;
+    min-height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-titulo h1 {
+    font-family: var(--font-titulo);
+    font-size: 75px;
+    font-weight: 500;
+}
+
+
+/* telas */
+.desktop{
+    display: block;
+}
+.mobile {
+    display: none;
+}
+
+
+
+
 /* Navbar */
-nav {
+
+.navbar {
     z-index: 2;
     width: 100%;
     height: 10vh;
     position: fixed;
     background-color: #ffffffeb;
-    backdrop-filter: blur(2px);
     border-bottom: solid 2px var(--azul-escuro);
 }
 
@@ -72,6 +95,11 @@ nav {
     text-decoration: none;
     font-weight: 400;
     color: var(--azul-escuro);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--azul-claro);
 }
 
 .nav-acessos {
@@ -201,21 +229,57 @@ nav {
     color: white;
 }
 
-
-/* Nosso serviço */
-.area-titulo {
+/* Quem somos */
+.efeito-azul {
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    height: 75%;
+    background-color: var(--azul-escuro);
+    color: white;
 }
 
-.area-titulo h1 {
-    font-family: var(--font-titulo);
-    font-size: 75px;
-    font-weight: 500;
+.container-sobre .area-titulo p {
+    margin: 0% 22%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.container-sobre .infos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2% 5%;
+}
+
+.container-sobre .card-desc {
+    width: 55%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 10px 10px 10px var(--azul-escuro);
+    padding: 2% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container-sobre .card-desc p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container-sobre .card-img {
+    width: 45%;
+}
+
+.container-sobre .card-img img {
+    width: 70%;
+    border-radius: 25px;
+    box-shadow: 15px 15px 0 var(--amarelo);
+}
+
+/* Nosso serviço */
+.container-servico .area-titulo h1 {
     color: var(--azul-titulos);
 }
 
@@ -227,25 +291,26 @@ nav {
     align-items: center;
 }
 
-.container-servico .card {
+.container-servico .card-stt {
     width: 22%;
-    height: 95%;
+    min-height: 95%;
     border-radius: 30px;
     border: solid 3px var(--azul-escuro);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .container-servico .card-imagem {
     width: 100%;
-    height: 30%;
+    height: 150px;
     background-image: url(../assets/images/camera-seguranca.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: end;
-    padding: 5% 2%;
+    padding: 5% 5%;
 }
 
 .container-servico .card-tipo {
@@ -263,7 +328,8 @@ nav {
     padding: 10% 10%;
     color: var(--azul-escuro);
 }
-.container-servico .card h1{
+
+.container-servico .card-stt h1 {
     color: var(--azul-titulos);
     font-family: var(--font-titulo);
     font-size: 25px;
@@ -449,4 +515,61 @@ footer .card button {
     border-radius: 0px 20px 20px 0px;
     font-weight: 600;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .desktop{
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+    .titulo-nav {
+        font-family: var(--font-titulo);
+        color: var(--azul-escuro);
+    }
+
+    .nav-link {
+        font-family: var(--font-texto);
+    }
+
+    /* home */
+    .container-home {
+        flex-direction: column;
+    }
+
+    .area-home {
+        width: 100%;
+        height: 50%;
+    }
+
+    .area-home .card-img {
+        width: 100%;
+        height: 75%;
+        border-radius: 0;
+        box-shadow: 0px 0px 0px var(--azul-escuro);
+        background-image: url(../assets/images/passageiro.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .area-home .card-img img {
+        display: none;
+    }
+
+    .titulo-home h1{
+        font-family: var(--font-titulo);
+        color: var(--azul-escuro);
+        text-align: center;
+        font-size: 60px;
+    }
+    .infos h1{
+        display: none;
+    }
+    .infos{
+        width: 100%;
+        height: 100%;
+    }
 }
