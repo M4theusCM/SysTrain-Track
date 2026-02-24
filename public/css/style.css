@@ -38,10 +38,11 @@ body {
 
 /* Navbar */
 nav {
+    z-index: 2;
     width: 100%;
     height: 10vh;
     position: fixed;
-    background-color: #ffffffdb;
+    background-color: #ffffffeb;
     backdrop-filter: blur(2px);
     border-bottom: solid 2px var(--azul-escuro);
 }
@@ -177,7 +178,7 @@ nav {
     font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     text-decoration: none;
     color: #000;
     transition: .5s;
@@ -208,6 +209,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .area-titulo h1 {
@@ -225,9 +227,53 @@ nav {
     align-items: center;
 }
 
+.container-servico .card {
+    width: 22%;
+    height: 95%;
+    border-radius: 30px;
+    border: solid 3px var(--azul-escuro);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container-servico .card-imagem {
+    width: 100%;
+    height: 30%;
+    background-image: url(../assets/images/camera-seguranca.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    padding: 5% 2%;
+}
+
+.container-servico .card-tipo {
+    text-align: center;
+    padding: 2% 3%;
+    border-radius: 20px;
+    background-color: #F3F8FF;
+    font-weight: 600;
+    color: var(--azul-titulos);
+}
+
+.container-servico .card-infos {
+    width: 100%;
+    height: 70%;
+    padding: 10% 10%;
+    color: var(--azul-escuro);
+}
+.container-servico .card h1{
+    color: var(--azul-titulos);
+    font-family: var(--font-titulo);
+    font-size: 25px;
+    margin-right: 30%;
+    margin-bottom: 30px;
+}
 
 /* acessos */
 .container-acesso {
+    margin-top: 2vh;
     width: 100vw;
     height: 70vh;
     background-image: url(../assets/images/data-center.png);
@@ -334,10 +380,10 @@ footer .links .titulo h1 {
 }
 
 .midias img {
-    width: 80px;
-    height: 80px;
-    background-color: rebeccapurple;
+    width: 30px;
+    height: 30px;
     margin-right: 5%;
+    margin-top: 5%;
 }
 
 .termos a,
