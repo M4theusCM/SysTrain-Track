@@ -33,7 +33,7 @@ function buscarPorId(id) {
 }
 
 function listar() {
-  var instrucaoSql = `SELECT idEmpresa, razaoSocial, cnpj, token FROM empresa`;
+  var instrucaoSql = `SELECT idEmpresa, razaoSocial, cnpj, token, email FROM empresa`;
 
   return database.executar(instrucaoSql);
 }

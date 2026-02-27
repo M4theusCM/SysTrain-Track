@@ -37,9 +37,7 @@ function cadastrarEmpresa(req, res) {
             .then(
                 function (resultado) {
                     res.json(resultado);
-
                     var fk_end_empresa = resultado.insertId;
-
                     empresaModel.cadastrarEndereco(estado, cep, numero, complemento, fk_end_empresa)
                     .then(
                         function () {

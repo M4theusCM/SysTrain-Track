@@ -143,7 +143,9 @@ h1 {
     /* width: 100%; */
     /* height: 50vh; */ 
 }
-
+.cinza{
+    background-color: #d7d7d7;
+}
 
 @media only screen and (max-width: 1000px) {
     .desktop {
@@ -170,4 +172,8 @@ h1 {
     .opcao-add img {
         width: 35px;
     }
+}
+
+.cinza {
+    background-color: #02033B;
 }
