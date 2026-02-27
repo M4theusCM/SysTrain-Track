@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/adm.css" />
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="container-sys">
+        <!-- nav mobile -->
+        <div class="mobile">
+            <nav class="navbar fixed-top nav-mobile">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Sys-Train Track</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                    aria-label="Search" />
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="nav-lateral desktop">
+            <div class="logo">
+                <img src="" alt="Sys-train track">
+            </div>
+            <div class="links">
+                <a class="link-lateral ativo" href="#">Empresa</a>
+                <a class="link-lateral " href="#">Empresa</a>
+                <a class="link-lateral " href="#">Empresa</a>
+            </div>
+            <div class="opcoes">
+                <div class="btn-lateral">
+                    <p>Luana</p>
+                </div>
+                <button onclick="sair()" class="btn-lateral ativo">
+                    <p>sair</p>
+                </button>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="titulo">
+                <h1>Empresa</h1>
+            </div>
+            <div class="opcao-add">
+                <button class="btn-add-desk desktop" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <p>Adicionar Empresa
+                    <p>
+                        <img src="../assets/icons/adicionar.png" alt="+">
+                </button>
+                <div onclick="modalCad()" class="btn-add-mobile mobile">
+                    <img src="../assets/icons/adicionar.png" alt="+">
+                </div>
+            </div>
+            <div class="tabela table-responsive">
+                <table class="table caption-top">
+                    <caption>Lista das empresa</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">nome</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>@social</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar Empresa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+            <div>
+                <label>Razão social</label>
+                <input id="input_razaoSocial" type="text" placeholder="Sys-Train Track">
+            </div>
+            <div>
+                <label>Token de cadastro</label>
+                <input id="input_token" type="text" placeholder="aaaa">
+            </div>
+            <div>
+                <label>CNPJ</label>
+                <input id="input_cnpj" type="text" placeholder="aaaaaaaaaaa">
+            </div>
+            <div>
+                <label>Email</label>
+                <input id="input_email_empresa" type="text" placeholder="sys@">
+            </div>
+            <div>
+                <label>Telefone para contato</label>
+                <input id="input_telefone" type="text" placeholder="40028922">
+            </div>
+            <div>
+                <label>Estado</label>
+                <input id="input_estado" type="text" placeholder="Cansado">
+            </div>
+            <div>
+                <label>CEP</label>
+                <input id="input_cep" type="text" placeholder="XXXXXXXXXX">    
+            </div>
+            <div>
+                <label>Numero Endereço</label>
+                <input id="input_numero" type="text" placeholder="XXX">
+            </div>
+            <div>
+                <label>Complemento</label>
+                <input id="input_complemento" type="text" placeholder="XXX">
+            </div>
+            <div id="div_msg"></div>
+            <button class="botao" onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
+<script>   
+  // Array para armazenar empresas cadastradas para validação de código de ativação 
+  let listaEmpresasCadastradas = [];
+
+  function cadastrar() {
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var razaoSocial = input_razaoSocial.value;
+    var token = input_token.value;
+    var cnpj = input_cnpj.value;
+    var email_empresa = input_email_empresa.value;
+    var telefone = input_telefone.value;
+    var estado = input_estado.value;
+    var cep = input_cep.value;
+    var numero = input_numero.value;
+    var complemento = input_complemento.value;
+
+    // Verificando se há algum campo em branco
+    if (
+      razaoSocial == "" ||
+      token == "" ||
+      cnpj == "" ||
+      email_empresa == "" ||
+      telefone == "" ||
+      estado == "" ||
+      cep == "" ||
+      numero == "" ||
+      complemento == ""
+    ) {
+      alert('Mensagem de erro para todos os campos em branco');
+
+    }
+
+    // Enviando o valor da nova input
+    fetch("/empresas/cadastrarEmpresa", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        razaoSocialServer: razaoSocial,
+        tokenServer: token,
+        cnpjServer: cnpj,
+        email_empresaServer: email_empresa,
+        telefoneServer: telefone,
+        estadoServer: estado,
+        cepServer: cep,
+        numeroServer: numero,
+        complementoServer: complemento
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de cadastro de funcionario...";
+
+          setTimeout(() => {
+            window.location = "cadastro.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  // Listando empresas cadastradas 
+  // function listar() {
+  //   fetch("/empresas/listar", {
+  //     method: "GET",
+  //   })
+  //     .then(function (resposta) {
+  //       resposta.json().then((empresas) => {
+  //         empresas.forEach((empresa) => {
+  //           listaEmpresasCadastradas.push(empresa);
+
+  //           console.log("listaEmpresasCadastradas")
+  //           console.log(listaEmpresasCadastradas[0].codigo_ativacao)
+  //         });
+  //       });
+  //     })
+  //     .catch(function (resposta) {
+  //       console.log(`#ERRO: ${resposta}`);
+  //     });
+  // }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+
+</script>
